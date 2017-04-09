@@ -1,0 +1,4 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["\/Z0al"]); }
+
+__d('legacy:PhotoSnowliftAds',['PhotoSnowliftAds'],(function a(b,c,d,e,f,g){b.PhotoSnowliftAds=c('PhotoSnowliftAds');}),3);
+__d('legacy:PhotoTagger',['PhotoTagger'],(function a(b,c,d,e,f,g){b.PhotoTagger=c('PhotoTagger');}),3);

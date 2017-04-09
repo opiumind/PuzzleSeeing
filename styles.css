@@ -30,21 +30,101 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 50px;
+  font-family: Arial;
 }
 .button:last-child{
   border-right: none;
 }
-.checkmark {
-    display:inline-block;
-    width: 22px;
-    height:22px;
-    -ms-transform: rotate(45deg); /* IE 9 */
-    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-    transform: rotate(45deg);
+.button:hover {
+  background-color: #78d07b;
 }
+.main-container{
+  margin-top: 50px;
+  /*display: inline-block;*/
+}
+.user-info{
+  text-align: center;
+}
+.user-pict{
+  width:200px;
+  display: inline-block;
+}
+.user-text-info{
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  vertical-align: top;
+  padding: 20px 10px;
+  display: inline-block;
+  height: 50px;
+}
+.user-rate{
+  color: #3b883e;
+  font-size: 30px;
+}
+.user-name{
+  line-height: 36px;
+  font-weight: bold;
+}
+.puzzle-list{
+  margin-top:20px;
+}
+.puzzle-text {
+  padding: 70px 20%;
+  color: #999999;
+  font-size: 50px;
+  text-align: center;
+}
+.puzzles-list {
+  text-align: center;
+  width: 960px;
+  box-sizing: border-box;
+  font-size: 0;
+  margin-left: calc((100% - 960px)/2);
 
-.checkmark_stem {
-    position: absolute;
-    width:3px;
+}
+.puzzle {
+  box-sizing: border-box;
+  margin: 20px;
+  width: 200px;
+  height:200px;
+  background-color: #c2f5c5;
+  text-align: center;
+  line-height: 200px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: cursive;
+  display: inline-block;
+}
+.puzzle._solved {
+  line-height: 30px;
+  vertical-align: top;
+  padding-top: 55px;
+  font-size: 30px;
+  background-color: #FF4500;
+}
+.puzzle._current {
+  box-shadow: 0 0 20px #0675a9;
+}
+.about {
+  margin-top: 20px;
+  margin-left: calc(20% - 10px);
+  margin-right: calc(20% - 10px);
+  text-align: center;
+  font-size: 25px;
+  font-family: Times, sans-serif, monospace;
+}
+.about-head {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 45px;
+  font-family: Times, sans-serif, monospace;
+}
+.image {
+  margin: auto;
+  display: block;
+  width: 20%;
+}

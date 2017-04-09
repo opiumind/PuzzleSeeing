@@ -1,0 +1,4 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["nUiMB"]); }
+
+__d("ColorBrewerUtil",[],(function a(b,c,d,e,f,g){f.exports={modifiedQualitativePalette:["#1f78b4","#ff7f00","#33a02c","#fdbf6f","#b2df8a","#6a3d9a","#e31a1c","#a6cee3","#cab2d6","#fb9a99"]};}),null);
+__d('VideoPivotsRegister',['Arbiter','AttachmentRelatedShareConstants','destroyOnUnload','SubscriptionsHandler'],(function a(b,c,d,e,f,g){var h={registerVideoUnit:function i(j,k){var l=0,m=new (c('SubscriptionsHandler'))(),n=function o(){return m.release();};m.addSubscriptions(j.addListener('updateStatus',function(o){if(l<k&&o.position>=k){c('Arbiter').inform(c('AttachmentRelatedShareConstants').FBVIDEO_VIEW,{fbvideo_id:j.getVideoID(),attachment:j.getRootNode()});n();}l=o.position;}));c('destroyOnUnload')(n);}};f.exports=h;}),null);
