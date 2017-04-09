@@ -108,3 +108,23 @@
 }
 .puzzle._current {
   box-shadow: 0 0 20px #0675a9;
+}
+.about {
+  margin-top: 20px;
+  margin-left: calc(20% - 10px);
+  margin-right: calc(20% - 10px);
+  text-align: center;
+  font-size: 25px;
+  font-family: Times, sans-serif, monospace;
+}
+.about-head {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 45px;
+  font-family: Times, sans-serif, monospace;
+}
+.image {
+  margin: auto;
+  display: block;
+  width: 20%;
+}
