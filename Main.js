@@ -43,21 +43,21 @@ var makeStreetView = function (callback) {
 };
 
 function extractLocation(href) {
-  console.log(href);
   var rx = /@(.*),/g;
   var arr = rx.exec(href);
+  console.log(arr[1]);
   var result = arr[1].split(',');
-  var location = {lat: result[0].parseInt(),lng: result[1].parseInt};
-  console.log(result);
+  var location = {lat: Number((parseFloat(result[0])).toFixed(3)),lng: Number((parseFloat(result[1])).toFixed(3))};
+  console.log(location);
   return location;
 }
 
 $(document).ready(function(){
-  var landmark0 = {lat:38.9929966,lng:-76.9430243};
-  var landmark1 = {lat:38.9914569,lng:-76.9417323};
-  var landmark2 = {lat:38.9914308,lng:-76.9407972};
-  var landmark3 = {lat:38.992611,lng:-76.9399563};
-  var landmark4 = {lat:38.9931296,lng:-76.9398171};
+  var landmark0 = {lat:38.9929,lng:-76.9430};
+  var landmark1 = {lat:38.9914,lng:-76.9417};
+  var landmark2 = {lat:38.9914,lng:-76.9407};
+  var landmark3 = {lat:38.9926,lng:-76.9399};
+  var landmark4 = {lat:38.9931,lng:-76.9398};
   makeStreetView(function(){
     init ();
     animate ();
@@ -66,67 +66,48 @@ $(document).ready(function(){
   $(window).on('click', function(e) {
     var currentLocationHref = $('.gm-iv-marker a').attr('href');
     currentLocation = extractLocation(currentLocationHref);
-    // if ((currentLocation.lat >= landmark0.lat - 0.0000010 
-    //   || currentLocation.lat < landmark0.lat - 0.0000010) 
-    //   && currentLocation.lng >= landmark0.lng - 0.0000010 
-    //   || currentLocation.lng < landmark0.lng - 0.0000010)) {
-    //   console.log("First loc")
-    // } else if ((currentLocation.lat >= landmark0.lat - 0.0000010 
-    //   || currentLocation.lat < landmark0.lat - 0.0000010) 
-    //   && currentLocation.lng >= landmark0.lng - 0.0000010 
-    //   || currentLocation.lng < landmark0.lng - 0.0000010)){
-
-    // } else if ((currentLocation.lat >= landmark0.lat - 0.0000010 || currentLocation.lat < landmark0.lat - 0.0000010) &&
-    //       currentLocation.lng >= landmark0.lng - 0.0000010 || currentLocation.lng < landmark0.lng - 0.0000010)) {
-
-    // } else if ((currentLocation.lat >= landmark0.lat - 0.0000010 || currentLocation.lat < landmark0.lat - 0.0000010) &&
-    //   currentLocation.lng >= landmark0.lng - 0.0000010 || currentLocation.lng < landmark0.lng - 0.0000010)) {
-
-    // }
-    if (currentLocation.lat == landmark0.lat 
-      && currentLocation.lng == landmark0.lng) {
-      console.log('First');
-    } else if (currentLocation.lat == landmark0.lat 
-      && currentLocation.lng == landmark0.lng) {
-      console.log('Second');
-    } else if (currentLocation.lat == landmark0.lat 
-      && currentLocation.lng == landmark0.lng) {
-      console.log('Third');
-    } else if (currentLocation.lat == landmark0.lat 
-      && currentLocation.lng == landmark0.lng) {
-      console.log('Forth');
-    } else if (currentLocation.lat == landmark0.lat 
-      && currentLocation.lng == landmark0.lng) {
-      console.log('Fifth');
+    if (currentLocation.lat==38.993 && currentLocation.lng==-76.943) {
+      console.log("First");
+      $('.hint0').css('opacity',1);
+      $('.hint1').css('opacity',0);
+      $('.hint2').css('opacity',0);
+      $('.hint3').css('opacity',0);
+      $('.hint4').css('opacity',0);
+    } else if (currentLocation.lat==38.991 && currentLocation.lng==-76.942) {
+      console.log("Second");
+      $('.hint0').css('opacity',0);
+      $('.hint1').css('opacity',1);
+      $('.hint2').css('opacity',0);
+      $('.hint3').css('opacity',0);
+      $('.hint4').css('opacity',0);
+    } else if (currentLocation.lat==38.991 && currentLocation.lng==-76.941) {
+      console.log("Third");
+      $('.hint0').css('opacity',0);
+      $('.hint1').css('opacity',0);
+      $('.hint2').css('opacity',1);
+      $('.hint3').css('opacity',0);
+      $('.hint4').css('opacity',0);
+    } else if (currentLocation.lat==38.993 && currentLocation.lng==-76.940) {
+      console.log("Forth");
+      $('.hint0').css('opacity',0);
+      $('.hint1').css('opacity',0);
+      $('.hint2').css('opacity',0);
+      $('.hint3').css('opacity',1);
+      $('.hint4').css('opacity',0);
+    } else if (currentLocation.lat==38.994 && currentLocation.lng==-76.940) {
+      console.log("Fifth");
+      $('.hint0').css('opacity',0);
+      $('.hint1').css('opacity',0);
+      $('.hint2').css('opacity',0);
+      $('.hint3').css('opacity',0);
+      $('.hint4').css('opacity',1);
+    } else {
+      $('.hint0').css('opacity',0);
+      $('.hint1').css('opacity',0);
+      $('.hint2').css('opacity',0);
+      $('.hint3').css('opacity',0);
+      $('.hint4').css('opacity',0);
     }
+
   });
-  
-//   var map = new google.maps.Map(document.getElementById("streetview"), myOptions);
-//   var marker = new google.maps.Marker({
-//       map: map,
-//       draggable: true,
-//       position: results[0].geometry.location
-
-//   });
-//   google.maps.event.addListener(marker, "click", function (event) {
-//     var latitude = event.latLng.lat();
-//     var longitude = event.latLng.lng();
-//     console.log( latitude + ', ' + longitude );
-
-//     radius = new google.maps.Circle({map: map,
-//         radius: 100,
-//         center: event.latLng,
-//         fillColor: '#777',
-//         fillOpacity: 0.1,
-//         strokeColor: '#AA0000',
-//         strokeOpacity: 0.8,
-//         strokeWeight: 2,
-//         draggable: true,    // Dragable
-//         editable: true      // Resizable
-//     });
-
-//     // Center of map
-//     map.panTo(new google.maps.LatLng(latitude,longitude));
-
-// });
 });
