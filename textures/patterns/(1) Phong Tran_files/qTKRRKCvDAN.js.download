@@ -1,0 +1,4 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["0DLuu"]); }
+
+__d('TimelineCoverDragdropEdit',['SinglePictureUploadTarget','TimelineCover'],(function a(b,c,d,e,f,g){var h=function l(){var m=c('TimelineCover').getInstance();m.hideLoadingIndicator();},i=function l(m){var n=c('TimelineCover').getInstance(),o=m.id,p=m.photo_node;n.updateCoverImage(o,p);},j=function l(m){c('TimelineCover').getInstance().showLoadingIndicator();},k=function l(m,n){new (c('SinglePictureUploadTarget'))(m,n).setAllowCrossOrigin(true).setPreprocessCallback(j).setOncompleteCallback(h).setAfterSuccessCallback(i).activate();};g.initialize_timeline_cover_drop_target=k;}),null);
+__d("XAtWorkAdminPanelController",["XController"],(function a(b,c,d,e,f,g){f.exports=c("XController").create("\/work\/admin\/",{ref:{type:"Enum",enumType:1},section:{type:"Enum",enumType:1}});}),null);
