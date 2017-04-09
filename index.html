@@ -5,17 +5,19 @@
     <title>PuzzleSeeing</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="js/third-party/jquery-3.2.0.min.js"></script>
+    <script src="js/third-party/threejs/three.js"></script>
+    <script type="text/javascript" src="./Main.js"></script>
+    <script src="js/third-party/threejs/StereoEffect.js"></script>
+    <script src="js/third-party/threejs/DeviceOrientationControls.js"></script>
+    <script src="js/third-party/threejs/OrbitControls.js"></script>
+    <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQyFs6FpeK8cowIJy03oDwWU6bv3tSIGs&libraries=geometry">
+    </script>
     <style>
       body {
         margin: 0px;
         overflow: hidden;
-      }
-      #example {
-        position: absolute;
-        top: 50px;
-        left: 0;
-        right: 0;
-        bottom: 0;
       }
     </style>
   </head>
@@ -25,15 +27,9 @@
         <a class="button" href="./index.html">Street</a>
         <a class="button" href="./Solution.html">Solutions</a>
     </div>
-    <div id="example"></div>
-
-  <script src="js/third-party/threejs/three.js"></script>
-  <script src="js/third-party/threejs/StereoEffect.js"></script>
-  <script src="js/third-party/threejs/DeviceOrientationControls.js"></script>
-  <script src="js/third-party/threejs/OrbitControls.js"></script>
-
+    <div id='streetview'></div>
   <script>
-    var camera, scene, renderer;
+    /*var camera, scene, renderer;
     var effect, controls;
     var element, container;
 
@@ -151,7 +147,7 @@
       } else if (container.webkitRequestFullscreen) {
         container.webkitRequestFullscreen();
       }
-    }
+    }*/
   </script>
-  </body>
+</body>
 </html>

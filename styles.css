@@ -1,3 +1,19 @@
+* {margin: 0; padding: 0; vertical-align: middle;}
+#streetview {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  /*z-index: 1;*/
+}
+#three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .button-container {
   font-size: 0;
