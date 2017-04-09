@@ -32,7 +32,7 @@ function render () {
 var makeStreetView = function (callback) {
   var streetObj = new google.maps.StreetViewPanorama(document.getElementById("streetview"),
     {
-      position: {lat: 38.9859914, lng: -76.9401365},
+      position: {lat: 38.9929966, lng: -76.9430243},
       pov: {heading: 165, pitch: 0},
       motionTrackingControlOptions: {
         position: google.maps.ControlPosition.LEFT_BOTTOM
